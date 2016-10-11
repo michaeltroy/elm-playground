@@ -1,0 +1,6 @@
+var _user$project$Greeting$sayGoodbye = function (name) {
+	return A2(_elm_lang$core$Basics_ops['++'], 'Goodbye ', name);
+};
+var _user$project$Greeting$sayHello = function (name) {
+	return A2(_elm_lang$core$Basics_ops['++'], 'Hello ', name);
+};
