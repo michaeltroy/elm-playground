@@ -1,6 +1,0 @@
-var _user$project$Repl$t_s_o_l = {ctor: '_Tuple0'};
-var _user$project$Repl$person = {name: 'Mike', age: 39};
-var _user$project$Repl$Score = {ctor: 'Score'};
-var _user$project$Repl$AddPlayer = {ctor: 'AddPlayer'};
-var _user$project$Repl$action = _user$project$Repl$AddPlayer;
-var _user$project$Repl$d_e_l_t_r_o_n_3_0_3_0 = _user$project$Repl$action;
