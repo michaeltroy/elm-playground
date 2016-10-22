@@ -14,12 +14,12 @@ import Nav exposing (simpleNav)
 
 type alias Model =
   { nav : List String
-  , alert : String
+  , appColor : String
   }
 
 
 type Msg
-  = SendAlert
+  = ChangeAppColor
 
 
 -- Inital Model
@@ -29,7 +29,7 @@ initialModel : Model
 initialModel =
   { nav =
     [ "item1", "item2", "item3" ]
-  , alert = "hello I am a alert!"
+  , appColor = "blue"
   }
 
 
@@ -44,11 +44,11 @@ contentBlock =
 
 view : Model -> Html Msg
 view model =
-  div [ id "app" ] [
+  div [ id "app", class ( model.appColor ) ] [
     p [ class "print-out" ] [ text ( toString model ) ]
     , p [ class "text-block"] [ text contentBlock ]
     , p [ class "headline" ] [ text (sayGoodbye "Eric") ]
-    , button [ type' "button", onClick SendAlert ] [ text "Press me" ]
+    , button [ type' "button", onClick ChangeAppColor ] [ text "Press me" ]
   ]
 
 
@@ -58,8 +58,8 @@ view model =
 update : Msg -> Model -> Model
 update msg model =
   case msg of
-    SendAlert ->
-      { model | alert = "Blah blah" }
+    ChangeAppColor ->
+      { model | appColor = "red" }
 
 
 -- Main
