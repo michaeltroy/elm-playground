@@ -1,4 +1,4 @@
-# Elm PLayground
+# Elm Playground
 
 This is a little playground for Elm learning.
 
