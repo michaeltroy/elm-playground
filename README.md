@@ -1,8 +1,6 @@
-# Tiny Build Elm
+# Elm PLayground
 
-Tired of dealing with a front-end mess for prototyping? Tiny Build (Elm) aims to solve that problem.
-
-Say hello to Tiny Build (Elm):
+This is a little playground for Elm learning.
 
 ## Run the scripts
 
