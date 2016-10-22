@@ -19,7 +19,7 @@ type alias Model =
 
 
 type Msg
-  = SendAlert String
+  = SendAlert
 
 
 -- Inital Model
@@ -45,10 +45,10 @@ contentBlock =
 view : Model -> Html Msg
 view model =
   div [ id "app" ] [
-    p [ class "text-block"] [ text contentBlock ]
+    p [ class "print-out" ] [ text ( toString model ) ]
+    , p [ class "text-block"] [ text contentBlock ]
     , p [ class "headline" ] [ text (sayGoodbye "Eric") ]
-    , button [ onClick SendAlert ] [ text "Click me"
-    ]
+    , button [ type' "button", onClick SendAlert ] [ text "Press me" ]
   ]
 
 
@@ -58,7 +58,7 @@ view model =
 update : Msg -> Model -> Model
 update msg model =
   case msg of
-    SendAlert alert ->
+    SendAlert ->
       { model | alert = "Blah blah" }
 
 

@@ -11,3 +11,12 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   font-weight: 300;
 }
+
+.print-out {
+  background-color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  font: menu;
+  color: black;
+  border-radius: 2px;
+}
