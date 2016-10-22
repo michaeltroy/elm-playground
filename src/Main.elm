@@ -33,11 +33,13 @@ initialModel =
   }
 
 
--- Content
+-- Nav
 
 
-contentBlock =
-  "My block of text"
+pageNav : Array String
+pageNav =
+  Array.fromList
+    initialModel.nav
 
 
 -- View
@@ -46,7 +48,6 @@ view : Model -> Html Msg
 view model =
   div [ id "app", class ( model.appColor ) ] [
     p [ class "print-out" ] [ text ( toString model ) ]
-    , p [ class "text-block"] [ text contentBlock ]
     , p [ class "headline" ] [ text (sayGoodbye "Eric") ]
     , button [ type' "button", onClick ChangeAppColor ] [ text "Press me" ]
   ]
