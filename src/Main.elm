@@ -3,7 +3,6 @@ import Html.Attributes exposing (..)
 import Html.App exposing (..)
 import Html.Events exposing (onClick)
 import Array exposing (..)
-import List exposing (..)
 import String
 
 import Greeting exposing (sayHello, sayGoodbye)
@@ -45,21 +44,16 @@ renderNav item =
   li [] [ text item ]
 
 
-
-renderMyList :  String -> Html a
+renderMyList : String -> Html a
 renderMyList item =
-  li [ class "blah" ] [ text ( "item: " ++ item ) ]
-
-myList = ["one","two","three"]
+  li [ ] [ text ( "item: " ++ item ) ]
 
 
 -- View
 
 view : Model -> Html Msg
 view model =
-  ul [] [
-    ( List.map renderMyList myList )
-    ]
+  ul [] (List.map renderMyList model.nav)
 
 -- div [ id "app", class ( model.appColor ) ] [
 --   (List.map renderMyList myList)
