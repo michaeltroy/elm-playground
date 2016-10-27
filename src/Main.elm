@@ -9,6 +9,7 @@ import Greeting exposing (sayHello, sayGoodbye)
 import Nav exposing (simpleNav)
 
 
+
 -- Types
 
 
@@ -28,39 +29,21 @@ type Msg
 initialModel : Model
 initialModel =
   { nav =
-    [ "item1", "item2", "item3" ]
+    [ "one", "two", "three", "four" ]
   , appColor = "blue"
   }
-
-
--- Nav
-
-
-type alias Nav =
-  { item : String }
-
-
-renderNav item =
-  li [] [ text item ]
-
-
-renderMyList : String -> Html a
-renderMyList item =
-  li [ ] [ text ( "item: " ++ item ) ]
 
 
 -- View
 
 view : Model -> Html Msg
 view model =
-  ul [] (List.map renderMyList model.nav)
-
--- div [ id "app", class ( model.appColor ) ] [
---   (List.map renderMyList myList)
---   , p [ class "print-out" ] [ text ( toString model ) ]
---   , p [ class "headline" ] [ text ( sayGoodbye "Eric" ) ]
---   , button [ type' "button", onClick ChangeAppColor ] [ text "Press me" ]
--- ]
+  div [ id "app", class ( model.appColor ) ] [
+    p [ class "print-out" ] [ text ( toString model ) ]
+    , p [ class "headline" ] [ text ( sayGoodbye "Eric" ) ]
+    , button [ type' "button", onClick ChangeAppColor ] [ text "Press me" ]
+    , ul [] (List.map simpleNav model.nav)
+  ]
 
 
 -- Update
